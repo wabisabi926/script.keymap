@@ -9,9 +9,11 @@
     <extension point="xbmc.python.script" library="main.py"/>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">An editor for keymap files</summary>
-		<summary lang="bg">Редактор на клавишните настройки</summary>
+	<summary lang="zh">键映射文件编辑器</summary>
+	<summary lang="bg">Редактор на клавишните настройки</summary>
         <description lang="en">Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by xbmc. Note: existing user defined key mappings will be removed.</description>
-		<description lang="bg">Редактор на клавишните настройки, с графичен интерфейс, за коригиране на съответните файлове на дистанционни, клавиатури и други входни устройства, който се поддържат от Kodi. Забележка: съществуващите настройки, дефинирани от потребителя, ще бъдат изтрити!</description>
+	<description lang="zh">Keymap Editor 是一个 GUI，用于为 xbmc 支持的远程、键盘和其他输入配置映射。注意：现有的用户定义的键映射将被删除。</description>
+	<description lang="bg">Редактор на клавишните настройки, с графичен интерфейс, за коригиране на съответните файлове на дистанционни, клавиатури и други входни устройства, който се поддържат от Kodi. Забележка: съществуващите настройки, дефинирани от потребителя, ще бъдат изтрити!</description>
         <platform>all</platform>
         <language/>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
