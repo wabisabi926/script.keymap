@@ -1,14 +1,2 @@
 # script.keymap
 A keymap editor for Kodi
-
-2026年2月27日更新：
-
-1.全汉化；
-
-2.启用多键映射文件支持
-
-3.增加视频流、音频流、字幕流一键映射（仅kodi 22 或 coreelec 22 及以上适用）；
-
-4.增加视频流、音频流、字幕流一键映射（任意版本 kodi 的导火线系列皮肤适用）；
-
-5.增加剧集跳过片头片尾的“记录当前时间为跳过点 (片头/片尾)”/“删除当前剧集的跳过点记录”映射（任意版本适用，需要先安装 https://github.com/wabisabi926/plugin.video.skipintro )；
