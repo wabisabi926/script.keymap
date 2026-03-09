@@ -88,10 +88,10 @@ _actions = [
         "nextstereomode", tr(30345),
         "previousstereomode", tr(30346),
         "stereomodetomono", tr(30347),
-        "DialogSelectVideo", tr(33001),
-        "activatewindow(1148)", tr(33004),
-        "RunScript(plugin.video.skipintro, ?mode=record_skip_point)", tr(33007),
-        "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)", tr(33008)
+        "RunScript(plugin.video.filteredmovies, ?mode=select_playback_speed)", tr(33001),
+        "RunScript(plugin.video.filteredmovies, ?mode=open_playing_tvshow)", tr(33004),
+        "RunScript(plugin.video.filteredmovies, ?mode=record_skip_point)", tr(33005),
+        "RunScript(plugin.video.filteredmovies, ?mode=delete_skip_point)", tr(33006),
     ]],
 # Audio, 
     [tr(32003), [
@@ -106,8 +106,7 @@ _actions = [
         "volampup", tr(30408),
         "volampdown", tr(30409),
         "volumeamplification", tr(30410),
-        "DialogSelectAudio", tr(33002),
-        "activatewindow(1146)", tr(33005)
+        "RunScript(plugin.video.filteredmovies, ?mode=select_audio)", tr(33002)
     ]],
 # Pictures, 
     [tr(32004), [
@@ -140,9 +139,8 @@ _actions = [
         "subtitlealign", tr(30607),
         "subtitleshiftup", tr(30608),
         "subtitleshiftdown", tr(30609),
-        "DialogSelectSubtitle", tr(33003),
-        "activatewindow(1147)", tr(33006)
-    ]],
+        "RunScript(plugin.video.filteredmovies, ?mode=select_subtitle)", tr(33003)
+    ]],        
 # PVR, 
     [tr(32006), [
         "channelup", tr(30700),
@@ -230,7 +228,8 @@ _actions = [
         "nextpreset", tr(31115),
         "previouspreset", tr(31116),
         "lockpreset", tr(31117),
-        "randompreset", tr(31118)
+        "randompreset", tr(31118),
+        "RunScript(plugin.video.filteredmovies, ?mode=launch_t9)", tr(33007)
     ]],
 ]
 
