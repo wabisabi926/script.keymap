@@ -1286,3 +1286,91 @@ msgstr "游戏手柄输入"
 msgctxt "#31295"
 msgid "Game Volume"
 msgstr "游戏音量"
+
+msgctxt "#31296"
+msgid "Video Versions"
+msgstr "视频版本"
+
+msgctxt "#31297"
+msgid "Video Extras"
+msgstr "视频花絮"
+
+msgctxt "#32001"
+msgid "Navigation"
+msgstr "导航"
+
+msgctxt "#32002"
+msgid "Playback"
+msgstr "播放控制"
+
+msgctxt "#32003"
+msgid "Audio"
+msgstr "音频"
+
+msgctxt "#32004"
+msgid "Pictures"
+msgstr "图片"
+
+msgctxt "#32005"
+msgid "Subtitle"
+msgstr "字幕"
+
+msgctxt "#32006"
+msgid "PVR"
+msgstr "PVR"
+
+msgctxt "#32007"
+msgid "Item Actions"
+msgstr "项目操作"
+
+msgctxt "#32008"
+msgid "System"
+msgstr "系统"
+
+msgctxt "#32009"
+msgid "Virtual Keyboard"
+msgstr "虚拟键盘"
+
+msgctxt "#32010"
+msgid "Other"
+msgstr "其他"
+
+msgctxt "#32011"
+msgid "Windows"
+msgstr "窗口"
+
+msgctxt "#32012"
+msgid "Add-ons"
+msgstr "插件"
+
+msgctxt "#33001"
+msgid "DialogSelectVideo (Only kodi 22+)"
+msgstr "选择视频流（仅适配 kodi 22+）"
+
+msgctxt "#33002"
+msgid "DialogSelectAudio (Only kodi 22+)"
+msgstr "选择音轨（仅适配 kodi 22+）"
+
+msgctxt "#33003"
+msgid "DialogSelectSubtitle (Only kodi 22+)"
+msgstr "选择字幕（仅适配 kodi 22+）"
+
+msgctxt "#33004"
+msgid "activatewindow(1148)"
+msgstr "选择视频流（仅适配 导火线）"
+
+msgctxt "#33005"
+msgid "activatewindow(1146)"
+msgstr "选择音轨（仅适配 导火线）"
+
+msgctxt "#33006"
+msgid "activatewindow(1147)"
+msgstr "选择字幕（仅适配 导火线）"
+
+msgctxt "#33007"
+msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
+msgstr "记录当前时间为跳过点 (片头/片尾)"
+
+msgctxt "#33008"
+msgid "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)"
+msgstr "删除当前剧集的跳过点记录"
