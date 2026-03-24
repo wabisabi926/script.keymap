@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: XBMC Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-03-25 05:16+0000\n"
-"Last-Translator: taxigps <taxigps@sina.com>\n"
+"PO-Revision-Date: 2026-03-24 21:21+0800\n"
+"Last-Translator: wabisabi926\n"
 "Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-keymap/zh_cn/>\n"
-"Language: zh_cn\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Poedit 3.5\n"
 
 msgctxt "Addon Summary"
 msgid "An editor for keymap files"
-msgstr "一个键映射文件的编辑器"
+msgstr "键映射编辑器"
 
 msgctxt "Addon Description"
 msgid "Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak."
@@ -78,7 +78,59 @@ msgctxt "#30012"
 msgid "Remove"
 msgstr "删除"
 
-# empty strings from id 30013 to 30099
+msgctxt "#30013"
+msgid "Long Press"
+msgstr "长按"
+
+msgctxt "#30014"
+msgid "Add mapping as long press?"
+msgstr "添加长按映射吗？"
+
+msgctxt "#30015"
+msgid "Enable long press mapping"
+msgstr "启用长按映射"
+
+msgctxt "#30016"
+msgid "General"
+msgstr "常规"
+
+msgctxt "#30017"
+msgid "Enable support for multiple keymap files"
+msgstr "启用多键映射文件支持"
+
+msgctxt "#30018"
+msgid "Keymaps are loaded alphabetically, and later loaded files override ones already loaded. DO NOT USE A FILENAME FOR A FILE GENERATED OUTSIDE KEYMAP EDITOR. This will almost certainly result in a crash or unexpected behavior."
+msgstr "键映射文件按字母顺序加载，后加载的文件会覆盖已加载的文件。请勿为键映射编辑器外生成的文件使用此命名方式，否则极有可能导致程序崩溃或运行异常。"
+
+msgctxt "#30019"
+msgid "Keymap Editor file name"
+msgstr "键映射编辑器文件名"
+
+msgctxt "#30020"
+msgid "Failed to load keymap file"
+msgstr "键映射文件加载失败"
+
+msgctxt "#30021"
+msgid "Rename keymap file"
+msgstr "重命名键映射文件"
+
+msgctxt "#30022"
+msgid "First run"
+msgstr "首次运行"
+
+msgctxt "#30023"
+msgid "By default this addon disables all other keymaps. If you want to use multiple keymap files, go to the settings and enable that option."
+msgstr "本插件默认禁用所有其他键映射配置。若需使用多键映射文件，请前往设置界面启用对应选项。"
+
+msgctxt "#30024"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "#30025"
+msgid "Continue"
+msgstr "继续"
+
+# empty strings from id 30026 to 30099
 # Window names
 msgctxt "#30100"
 msgid "Global"
@@ -382,7 +434,7 @@ msgstr "创建集书签"
 
 msgctxt "#30332"
 msgid "Toggle 3D/Stereoscopic mode"
-msgstr "切换3D/立体模式"
+msgstr "切换 3D/立体模式"
 
 msgctxt "#30333"
 msgid "Switch Player"
@@ -430,19 +482,19 @@ msgstr "切换 HDHR"
 
 msgctxt "#30344"
 msgid "Cycle 3D Mode"
-msgstr "循环3D模式"
+msgstr "循环 3D 模式"
 
 msgctxt "#30345"
 msgid "Next 3D Mode"
-msgstr "下一3D模式"
+msgstr "下一 3D 模式"
 
 msgctxt "#30346"
 msgid "Previous 3D Mode"
-msgstr "上一3D模式"
+msgstr "上一 3D 模式"
 
 msgctxt "#30347"
 msgid "3D Mono"
-msgstr "3D单声道"
+msgstr "3D 单声道"
 
 msgctxt "#30348"
 msgid "Tempo Up"
@@ -452,7 +504,7 @@ msgctxt "#30349"
 msgid "Tempo Down"
 msgstr "节奏降低"
 
-# empty strings from id 30348 to 30399
+# empty strings from id 30350 to 30399
 # Audio
 msgctxt "#30400"
 msgid "Mute"
@@ -642,7 +694,7 @@ msgstr "录像"
 
 msgctxt "#30708"
 msgid "Toggle Commskip"
-msgstr "切换 Commskip"
+msgstr "切换跳过广告"
 
 msgctxt "#30709"
 msgid "PVR Show Timer Rule"
@@ -752,7 +804,11 @@ msgctxt "#30911"
 msgid "Toggle Font"
 msgstr "切换字体"
 
-# empty strings from id 30912 to 30999
+msgctxt "#30912"
+msgid "Reload Skin"
+msgstr "重载皮肤"
+
+# empty strings from id 30913 to 30999
 # Virtual Keyboard
 msgctxt "#31000"
 msgid "Enter"
@@ -812,19 +868,19 @@ msgstr "9"
 
 msgctxt "#31014"
 msgid "Teletext Red"
-msgstr "图文电视红色"
+msgstr "图文电视红色快捷键"
 
 msgctxt "#31015"
 msgid "Teletext Green"
-msgstr "图文电视绿色"
+msgstr "图文电视绿色快捷键"
 
 msgctxt "#31016"
 msgid "Teletext Yellow"
-msgstr "图文电视黄色"
+msgstr "图文电视黄色快捷键"
 
 msgctxt "#31017"
 msgid "Teletext Blue"
-msgstr "图文电视蓝色"
+msgstr "图文电视蓝色快捷键"
 
 # empty strings from id 31018 to 31099
 # Other
@@ -904,7 +960,11 @@ msgctxt "#31118"
 msgid "Switch to a new random preset"
 msgstr "切换到新的随机预设"
 
-# empty strings from id 31119 to 31199
+msgctxt "#31119"
+msgid "Player debug video"
+msgstr "播放器调试视频"
+
+# empty strings from id 31120 to 31199
 # Activate Window
 msgctxt "#31200"
 msgid "Settings"
@@ -1249,11 +1309,11 @@ msgstr "电影片名"
 
 msgctxt "#31286"
 msgid "TV Shows"
-msgstr "剧集"
+msgstr "电视剧"
 
 msgctxt "#31287"
 msgid "TV Show Titles"
-msgstr "剧集片名"
+msgstr "电视剧片名"
 
 msgctxt "#31288"
 msgid "Music Videos"
@@ -1261,11 +1321,11 @@ msgstr "音乐电视"
 
 msgctxt "#31289"
 msgid "Recently Added Movies"
-msgstr "最近添加电影"
+msgstr "最近添加的电影"
 
 msgctxt "#31290"
 msgid "Recently Added Episodes"
-msgstr "最近添加分集"
+msgstr "最近添加的剧集"
 
 msgctxt "#31291"
 msgid "Recently Added Music Videos"
@@ -1344,28 +1404,28 @@ msgid "Add-ons"
 msgstr "插件"
 
 msgctxt "#33001"
-msgid "DialogSelectVideo (Only kodi 22+)"
-msgstr "选择视频流（仅适配 kodi 22+）"
+msgid "DialogSelectVideo (Only Piers+)"
+msgstr "选择视频流（仅适配 Piers+）"
 
 msgctxt "#33002"
-msgid "DialogSelectAudio (Only kodi 22+)"
-msgstr "选择音轨（仅适配 kodi 22+）"
+msgid "DialogSelectAudio (Only Piers+)"
+msgstr "选择音轨（仅适配 Piers+）"
 
 msgctxt "#33003"
-msgid "DialogSelectSubtitle (Only kodi 22+)"
-msgstr "选择字幕（仅适配 kodi 22+）"
+msgid "DialogSelectSubtitle (Only Piers+)"
+msgstr "选择字幕（仅适配 Piers+）"
 
 msgctxt "#33004"
 msgid "activatewindow(1148)"
-msgstr "选择视频流（仅适配 导火线）"
+msgstr "选择视频流（仅适配 导火线/地平线）"
 
 msgctxt "#33005"
 msgid "activatewindow(1146)"
-msgstr "选择音轨（仅适配 导火线）"
+msgstr "选择音轨（仅适配 导火线/地平线）"
 
 msgctxt "#33006"
 msgid "activatewindow(1147)"
-msgstr "选择字幕（仅适配 导火线）"
+msgstr "选择字幕（仅适配 导火线/地平线）"
 
 msgctxt "#33007"
 msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
