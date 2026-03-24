@@ -19,7 +19,7 @@ msgid "An editor for keymap files"
 msgstr ""
 
 msgctxt "Addon Description"
-msgid "Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi."
+msgid "Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: by default existing user defined key mappings will be renamed to .bak."
 msgstr ""
 
 # Text Messages
@@ -1378,7 +1378,6 @@ msgstr ""
 msgctxt "#31297"
 msgid "Video Extras"
 msgstr ""
-
 msgctxt "#32001"
 msgid "Navigation"
 msgstr ""
@@ -1428,28 +1427,28 @@ msgid "Add-ons"
 msgstr ""
 
 msgctxt "#33001"
-msgid "DialogSelectVideo (Only kodi 22+)"
+msgid "DialogSelectVideo (Only Piers+)"
 msgstr ""
 
 msgctxt "#33002"
-msgid "DialogSelectAudio (Only kodi 22+)"
+msgid "DialogSelectAudio (Only Piers+)"
 msgstr ""
 
-msgctxt "#332003"
-msgid "DialogSelectSubtitle (Only kodi 22+)"
+msgctxt "#33003"
+msgid "DialogSelectSubtitle (Only Piers+)"
 msgstr ""
 
 msgctxt "#33004"
 msgid "activatewindow(1148)"
-msgstr "Select Video (Only Fuse Skin)"
+msgstr "Select Video (Only Fuse/Horizon Skin)"
 
 msgctxt "#33005"
 msgid "activatewindow(1146)"
-msgstr "Select Audio (Only Fuse Skin)"
+msgstr "Select Audio (Only Fuse/Horizon Skin)"
 
 msgctxt "#33006"
 msgid "activatewindow(1147)"
-msgstr "Select Subtitle (Only Fuse Skin)"
+msgstr "Select Subtitle (Only Fuse/Horizon Skin)"
 
 msgctxt "#33007"
 msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
