@@ -1378,3 +1378,83 @@ msgstr ""
 msgctxt "#31297"
 msgid "Video Extras"
 msgstr ""
+
+msgctxt "#32001"
+msgid "Navigation"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Playback"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Pictures"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Subtitle"
+msgstr ""
+
+msgctxt "#32006"
+msgid "PVR"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Item Actions"
+msgstr ""
+
+msgctxt "#32008"
+msgid "System"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Virtual Keyboard"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Other"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Windows"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Add-ons"
+msgstr ""
+
+msgctxt "#33001"
+msgid "DialogSelectVideo (Only kodi 22+)"
+msgstr ""
+
+msgctxt "#33002"
+msgid "DialogSelectAudio (Only kodi 22+)"
+msgstr ""
+
+msgctxt "#332003"
+msgid "DialogSelectSubtitle (Only kodi 22+)"
+msgstr ""
+
+msgctxt "#33004"
+msgid "activatewindow(1148)"
+msgstr "Select Video (Only Fuse Skin)"
+
+msgctxt "#33005"
+msgid "activatewindow(1146)"
+msgstr "Select Audio (Only Fuse Skin)"
+
+msgctxt "#33006"
+msgid "activatewindow(1147)"
+msgstr "Select Subtitle (Only Fuse Skin)"
+
+msgctxt "#33007"
+msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
+msgstr "Record skip point"
+
+msgctxt "#33008"
+msgid "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)"
+msgstr "Delete Skip point"
