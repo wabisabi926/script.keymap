@@ -1,65 +1,83 @@
-v.1.3.2
-- updated translations from Weblate
+# 版本更新日志
 
-v.1.3.1
-- added playerdebugvideo and reloadskin (thanks to Fuchs246)
+## v.1.6.3 魔改
+- 修复：**自定义 RunScript 动作在设置界面中消失的问题；**
+- 修复：**保持动作字符串的原始大小写，确保与预定义动作一致；**
+- 修复：**确保用户定义的动作能够正确保存和显示；**
 
-v.1.3.0
-- added option to enable long press mapping
+## v.1.6.2 魔改
 
-v.1.2.1
-- added video versions and video extras windows
+- 需要先安装该插件： plugin.video.filteredmovies
 
-v1.2.0
-- replaced favourites (depreciated) with favouritesbrowser
-- updated translation files
+- 新增选项：**“打开筛选/T9搜索页面” 一键映射；**
+- 新增功能：**“倍速播放（coreelec下不适用）、音频流、字幕流” 一键映射；**
+- 新增功能：**剧集跳过片头片尾的“记录当前时间为跳过点 (片头/片尾)”/“删除当前剧集的跳过点记录” 一键映射；**
+- 新增功能：**打开当前播放剧集的列表” 一键映射；** 
 
-v1.1.5
-- added ability to map TempoUp and TempoDown
+## v.1.4.0
+- 新增选项：**不禁用其他按键映射文件**
+- 新增功能：**可重命名按键映射文件**，用于控制加载顺序
+- 更新 Weblate 平台的翻译文件
 
-v.1.1.4
-- fixed depreciacted translatepath call
-- removed dependancy on kodi-six
-- updated language files
+## v.1.3.1
+- 新增播放器调试视频（playerdebugvideo）和皮肤重载（reloadskin）功能（感谢 Fuchs246）
 
-v1.1.2
-- Added support for v19 Matrix
-- Updates for better support in v18 Leia
-- Fix so script only backups user defined keymaps if trying to save new keymap file
-- Moved all text into language file for easier internationalization
+## v.1.3.0
+- 新增选项：**启用长按按键映射**
 
-v1.0.10
-- Added support for v17 Krypton
+## v.1.2.1
+- 新增视频版本窗口和视频附加内容窗口
 
-v1.0.9
-- Fixed error in XML writer causing no keys to work
+## v1.2.0
+- 用收藏浏览器（favouritesbrowser）替换已废弃的收藏功能（favourites）
+- 更新翻译文件
 
-v1.0.8
-- Added new Helix PVR Window IDs
-- Added ability to remove key mappings
+## v1.1.5
+- 新增**播放速度加快（TempoUp）**和**播放速度减慢（TempoDown）**按键映射功能
 
-v0.9.7
-- Added UpdateLibrary and CleanLibrary actions
+## v.1.1.4
+- 修复已废弃的 translatepath 调用问题
+- 移除对 kodi-six 的依赖
+- 更新语言文件
 
-v0.9.6
-- Added more actions new in Gotham
-- Fixed: permission error during save on android
+## v1.1.2
+- 新增对 Kodi v19 Matrix 版本的支持
+- 优化适配，提升对 v18 Leia 版本的支持效果
+- 修复问题：保存新按键映射文件时，脚本仅备份用户自定义按键映射
+- 将所有文本迁移至语言文件，便于国际化适配
 
-v0.9.5
-- Added reapeat and shuffle actions
-- Added action for opening subtitle search
-- Fixed: script sometimes failing to remove old keymap files on Windows
+## v1.0.10
+- 新增对 Kodi v17 Krypton 版本的支持
 
-v0.9.4
-- Fixed: script failing to start when no audio/video add-ons is installed
+## v1.0.9
+- 修复 XML 写入器错误，该错误导致所有按键失效
 
-v0.9.3
-- Added actions for launching Add-ons
-- Added timeout to dialog that abort if no key is pressed
-- "Delete" option changed to load defaults instead of deleting keymap file
+## v1.0.8
+- 新增 Helix 版本 PVR 窗口ID
+- 新增**移除按键映射**功能
 
-v0.9.2
-- Added System.LogOff action
+## v0.9.7
+- 新增媒体库更新（UpdateLibrary）和媒体库清理（CleanLibrary）操作
 
-v0.9.1
-- Fixed: script not working on os x due to missing python libraries
+## v0.9.6
+- 新增 Gotham 版本更多新操作指令
+- 修复问题：安卓系统保存时的权限错误
+
+## v0.9.5
+- 新增循环播放（repeat）和随机播放（shuffle）操作
+- 新增打开字幕搜索的操作指令
+- 修复问题：Windows 系统下脚本偶尔无法删除旧按键映射文件
+
+## v0.9.4
+- 修复问题：未安装音视频插件时脚本无法启动
+
+## v0.9.3
+- 新增启动插件的操作指令
+- 弹窗新增超时机制：无按键操作时自动取消
+- “删除”选项修改为**加载默认配置**，而非直接删除按键映射文件
+
+## v0.9.2
+- 新增系统注销（System.LogOff）操作
+
+## v0.9.1
+- 修复问题：因缺失Python库，脚本在 macOS 系统无法运行
