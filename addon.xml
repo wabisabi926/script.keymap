@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.keymap" name="Keymap Editor" version="1.6.0" provider-name="wabisabi926,takoi,pkscout">
+<addon id="script.keymap" name="Keymap Editor" version="1.6.3" provider-name="wabisabi926,takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
@@ -7,9 +7,13 @@
 	</requires>
 	<extension point="xbmc.python.script" library="default.py"/>
 	<extension point="xbmc.addon.metadata">
-		<news>v.1.5
-- added option not disable other keymap files
-- added ability to rename keymap file to control load order
+		<news>v.1.6.3
+- 需要先安装该插件： plugin.video.filteredmovies
+
+- 新增选项：**“打开筛选/T9搜索页面” 一键映射；**
+- 新增功能：**“倍速播放（coreelec下不适用）、音频流、字幕流” 一键映射；**
+- 新增功能：**剧集跳过片头片尾的“记录当前时间为跳过点 (片头/片尾)”/“删除当前剧集的跳过点记录” 一键映射；**
+- 新增功能：**打开当前播放剧集的列表” 一键映射；** 
 		</news>
 		<assets>
         	<icon>icon.png</icon>
