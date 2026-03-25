@@ -6,9 +6,11 @@
 	</requires>
 	<extension point="xbmc.python.script" library="default.py"/>
 	<extension point="xbmc.addon.metadata">
-		<news>v.1.4.0
-- added option not disable other keymap files
-- added ability to rename keymap file to control load order
+		<news>v.1.6.2 魔改
+- 新增选项：**视频流、音轨、字幕一键映射（仅 Piers 及以上适用）；**
+- 新增功能：**视频流、音轨、字幕一键映射（任意版本 kodi/coreelec 的导火线系列皮肤适用）；**
+- 新增功能：**剧集跳过片头片尾的“记录当前时间为跳过点 (片头/片尾)”/“删除当前剧集的跳过点记录”映射（任意版本适用）；**
+  需要先安装 跳过片头片尾插件： https://github.com/wabisabi926/plugin.video.skipintro
 		</news>
 		<assets>
         	<icon>icon.png</icon>
