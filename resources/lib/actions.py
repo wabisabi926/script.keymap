@@ -86,12 +86,14 @@ _actions = [
         "hdrtoggle", tr(30343),
         "stereomode", tr(30344),
         "nextstereomode", tr(30345),
-        "previousstereomode", tr(30346),
+        "previousstereomode"， tr(30346),
         "stereomodetomono", tr(30347),
         "RunScript(plugin.video.filteredmovies, ?mode=select_playback_speed)", tr(33001),
         "RunScript(plugin.video.filteredmovies, ?mode=open_playing_tvshow)", tr(33004),
         "RunScript(plugin.video.filteredmovies, ?mode=record_skip_point)", tr(33005),
         "RunScript(plugin.video.filteredmovies, ?mode=delete_skip_point)", tr(33006),
+        "RunScript(plugin.video.filteredmovies, ?mode=set_vs10_mode)", tr(33009),
+        "RunScript(plugin.video.filteredmovies, ?mode=set_vs10_mode&target_mode=vs10.dv)", tr(33010)
     ]],
 # Audio, 
     [tr(32003), [
@@ -184,7 +186,9 @@ _actions = [
         "settingsreset", tr(30909),
         "settingslevelchange", tr(30910),
         "togglefont", tr(30911),
-        "reloadskin", tr(30912)
+        "reloadskin", tr(30912),
+        "RunScript(plugin.video.filteredmovies, ?mode=restart_linux_kodi)", tr(33011),
+        "RunScript(plugin.video.filteredmovies, ?mode=reboot_from_nand)", tr(33012)
     ]],
 # Virtual Keyboard, 
     [tr(32009), [
@@ -229,7 +233,8 @@ _actions = [
         "previouspreset", tr(31116),
         "lockpreset", tr(31117),
         "randompreset", tr(31118),
-        "RunScript(plugin.video.filteredmovies, ?mode=launch_t9)", tr(33007)
+        "RunScript(plugin.video.filteredmovies, ?mode=launch_t9)", tr(33007),
+        "RunScript(plugin.video.filteredmovies, ?mode=toggle_favourite)", tr(33008)
     ]],
 ]
 
