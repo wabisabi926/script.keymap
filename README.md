@@ -1,5 +1,6 @@
 # script.keymap
-A keymap editor for Kodi
+
+魔改版 更新日记
 
 1.全汉化；
 
