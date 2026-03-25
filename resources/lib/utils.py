@@ -48,7 +48,7 @@ def read_keymap(filename):
                         action = mapping.text
                         if action:
                             ret.append(
-                                (context.tag.lower(), action.lower(), key.lower()))
+                                (context.tag.lower(), action, key.lower()))
     return ret
 
 
