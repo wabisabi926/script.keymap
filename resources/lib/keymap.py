@@ -77,6 +77,7 @@ def main():
             # edit
             editor = Editor(defaultkeymap, userkeymap)
             editor.start()
+            userkeymap = editor.userkeymap  # Update userkeymap with changes
             confirm_discard = editor.dirty
         elif idx == 1:
             # backup any user defined keymaps

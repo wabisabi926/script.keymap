@@ -20,7 +20,7 @@ import xbmcaddon
 from threading import Timer
 from collections import OrderedDict
 from xbmcgui import Dialog, WindowXMLDialog
-from resources.lib.actions import ACTIONS, WINDOWS
+from resources.lib.actions import ACTIONS, WINDOWS, _actions
 from resources.lib.utils import tr, settings
 
 KODIMONITOR = xbmc.Monitor()
@@ -85,6 +85,8 @@ class Editor(object):
     def _current_keymap(self, window, category):
         actions = OrderedDict([(action, "")
                               for action in ACTIONS[category].keys()])
+        names = ACTIONS[category].copy()
+        
         for w, a, k in self.defaultkeymap:
             if w == window:
                 if a in actions.keys():
@@ -93,7 +95,7 @@ class Editor(object):
             if w == window:
                 if a in actions.keys():
                     actions[a] = k
-        names = ACTIONS[category]
+        
         return [(action, key, names[action]) for action, key in actions.items()]
 
     def _long_press(self):

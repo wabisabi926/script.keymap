@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.keymap" name="Keymap Editor" version="1.6.2" provider-name="wabisabi926,takoi,pkscout">
+<addon id="script.keymap" name="Keymap Editor" version="1.6.3" provider-name="wabisabi926,takoi,pkscout">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.defusedxml" version="0.6.0+matrix.1" />
 	</requires>
 	<extension point="xbmc.python.script" library="default.py"/>
 	<extension point="xbmc.addon.metadata">
-		<news>v.1.6.2 魔改
+		<news>v.1.6.3 魔改
+- 修复：**自定义 RunScript 动作在设置界面中消失的问题；**
+- 修复：**保持动作字符串的原始大小写，确保与预定义动作一致；**
+- 修复：**确保用户定义的动作能够正确保存和显示；**
+
+v.1.6.2 魔改
 - 新增选项：**视频流、音轨、字幕一键映射（仅 Piers 及以上适用）；**
 - 新增功能：**视频流、音轨、字幕一键映射（任意版本 kodi/coreelec 的导火线系列皮肤适用）；**
 - 新增功能：**剧集跳过片头片尾的“记录当前时间为跳过点 (片头/片尾)”/“删除当前剧集的跳过点记录”映射（任意版本适用）；**
