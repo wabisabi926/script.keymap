@@ -1430,3 +1430,23 @@ msgstr "删除当前剧集的跳过点记录"
 msgctxt "#33007"
 msgid "RunScript(plugin.video.filteredmovies, ?mode=launch_t9)"
 msgstr "打开筛选/T9 搜索页面"
+
+msgctxt "#33008"
+msgid "RunScript(plugin.video.filteredmovies, ?mode=toggle_favourite)"
+msgstr "切换收藏状态/将选中项加入或移出收藏夹"
+
+msgctxt "#33009"
+msgid "RunScript(plugin.video.filteredmovies, ?mode=set_vs10_mode)"
+msgstr "VS10 引擎模式（循环切换）"
+
+msgctxt "#33010"
+msgid "RunScript(plugin.video.filteredmovies, ?mode=set_vs10_mode&target_mode=vs10.dv)"
+msgstr "VS10 引擎模式（指定当前片源可用的转码模式）"
+
+msgctxt "#33011"
+msgid "RunScript(plugin.video.filteredmovies, ?mode=restart_linux_kodi)"
+msgstr "重启 Kodi（仅适配 Linux 系统）"
+
+msgctxt "#33012"
+msgid "RunScript(plugin.video.filteredmovies, ?mode=reboot_from_nand)"
+msgstr "重启到安卓系统"
