@@ -1405,27 +1405,27 @@ msgstr "插件"
 
 msgctxt "#33001"
 msgid "DialogSelectVideo (Only Piers+)"
-msgstr "选择视频流（仅适配 Piers+）"
+msgstr "视频流（仅适配 Piers+）"
 
 msgctxt "#33002"
 msgid "DialogSelectAudio (Only Piers+)"
-msgstr "选择音轨（仅适配 Piers+）"
+msgstr "音轨（仅适配 Piers+）"
 
 msgctxt "#33003"
 msgid "DialogSelectSubtitle (Only Piers+)"
-msgstr "选择字幕（仅适配 Piers+）"
+msgstr "字幕（仅适配 Piers+）"
 
 msgctxt "#33004"
 msgid "activatewindow(1148)"
-msgstr "选择视频流（仅适配 导火线/地平线）"
+msgstr "视频流（仅适配 导火线/地平线）"
 
 msgctxt "#33005"
 msgid "activatewindow(1146)"
-msgstr "选择音轨（仅适配 导火线/地平线）"
+msgstr "音轨（仅适配 导火线/地平线）"
 
 msgctxt "#33006"
 msgid "activatewindow(1147)"
-msgstr "选择字幕（仅适配 导火线/地平线）"
+msgstr "字幕（仅适配 导火线/地平线）"
 
 msgctxt "#33007"
 msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
@@ -1437,8 +1437,8 @@ msgstr "删除当前剧集的跳过点记录"
 
 msgctxt "#33009"
 msgid "activatewindow(1140)"
-msgstr "选择 OSD 播放列表（仅适配 导火线/地平线）"
+msgstr "OSD 播放列表（仅适配 导火线/地平线）"
 
 msgctxt "#33010"
 msgid "activatewindow(1143)"
-msgstr "选择 OSD 播放列表（仅适配 清风2）"
+msgstr "OSD 播放列表（仅适配 清风2 复活版）"
