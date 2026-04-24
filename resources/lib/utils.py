@@ -93,7 +93,7 @@ def rename_keymap(filename):
 def _set_safe_filename(filename):
     s_name = ''
     for c in list(filename):
-        if c in list('.<>:"/\|?*'):
+        if c in list('.<>:"/\\|?*'):
             s_name = s_name + '_'
         else:
             s_name = s_name + c
