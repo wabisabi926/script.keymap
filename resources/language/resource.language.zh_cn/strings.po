@@ -1434,3 +1434,11 @@ msgstr "记录当前时间为跳过点 (片头/片尾)"
 msgctxt "#33008"
 msgid "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)"
 msgstr "删除当前剧集的跳过点记录"
+
+msgctxt "#33009"
+msgid "activatewindow(1140)"
+msgstr "选择 OSD 播放列表（仅适配 导火线/地平线）"
+
+msgctxt "#33010"
+msgid "activatewindow(1143)"
+msgstr "选择 OSD 播放列表（仅适配 清风2）"
