@@ -84,14 +84,16 @@ _actions = [
         "previousscene", tr(30341),
         "videonextstream", tr(30342),
         "hdrtoggle", tr(30343),
-        "stereomode", tr(30344),
+        "stereomode"， tr(30344),
         "nextstereomode", tr(30345),
         "previousstereomode", tr(30346),
-        "stereomodetomono", tr(30347),
+        "stereomodetomono"， tr(30347),
         "DialogSelectVideo", tr(33001),
         "activatewindow(1148)", tr(33004),
         "RunScript(plugin.video.skipintro, ?mode=record_skip_point)", tr(33007),
-        "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)", tr(33008)
+        "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)", tr(33008),
+        "activatewindow(1140)", tr(33009),
+        "activatewindow(1143)", tr(33010)
     ]],
 # Audio, 
     [tr(32003), [
