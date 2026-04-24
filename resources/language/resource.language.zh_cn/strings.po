@@ -1405,27 +1405,27 @@ msgstr "插件"
 
 msgctxt "#33001"
 msgid "DialogSelectVideo (Only Piers+)"
-msgstr "视频流（仅适配 Piers+）"
+msgstr "一键视频流（仅适配 Piers+）"
 
 msgctxt "#33002"
 msgid "DialogSelectAudio (Only Piers+)"
-msgstr "音轨（仅适配 Piers+）"
+msgstr "一键音轨（仅适配 Piers+）"
 
 msgctxt "#33003"
 msgid "DialogSelectSubtitle (Only Piers+)"
-msgstr "字幕（仅适配 Piers+）"
+msgstr "一键字幕（仅适配 Piers+）"
 
 msgctxt "#33004"
 msgid "activatewindow(1148)"
-msgstr "视频流（仅适配 导火线/地平线）"
+msgstr "一键视频流（仅适配 导火线/地平线）"
 
 msgctxt "#33005"
 msgid "activatewindow(1146)"
-msgstr "音轨（仅适配 导火线/地平线）"
+msgstr "一键音轨（仅适配 导火线/地平线）"
 
 msgctxt "#33006"
 msgid "activatewindow(1147)"
-msgstr "字幕（仅适配 导火线/地平线）"
+msgstr "一键字幕（仅适配 导火线/地平线）"
 
 msgctxt "#33007"
 msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
