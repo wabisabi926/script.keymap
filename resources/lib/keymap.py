@@ -108,6 +108,10 @@ def main():
             # reset
             confirm_discard = bool(userkeymap)
             userkeymap = []
+            if os.path.exists(gen_file):
+                xbmcvfs.copy(gen_file, gen_file + ".old")
+            utils.write_keymap(userkeymap, gen_file)
+            xbmc.executebuiltin("action(reloadkeymaps)")
             break
         elif idx == 3:
             # rename the file
