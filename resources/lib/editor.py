@@ -20,7 +20,10 @@ import xbmcaddon
 from threading import Timer
 from collections import OrderedDict
 from xbmcgui import Dialog, WindowXMLDialog
-from resources.lib.actions import ACTIONS, WINDOWS, _actions
+from resources.lib.actions import ACTIONS, WINDOWS, _actions, CUSTOM_CATEGORY
+from resources.lib.actions import (
+    load_custom_actions, add_custom_action, delete_custom_action
+)
 from resources.lib.utils import tr, settings
 
 KODIMONITOR = xbmc.Monitor()
@@ -52,22 +55,54 @@ class Editor(object):
                     current_keymap = self._current_keymap(window, category)
                     labels = ["%s - %s" % (name, key)
                               for _, key, name in current_keymap]
+                    
+                    labels.append(tr(34001))
+                    is_custom_category = (category == tr(CUSTOM_CATEGORY))
+                    if is_custom_category:
+                        labels.append(tr(34002))
+                    
                     idx = Dialog().select(tr(30009), labels)
                     if idx == -1:
                         break
+                    
+                    if idx == len(current_keymap):
+                        # Clicked "Add custom action..."
+                        action_str = self._add_custom_action_dialog(category)
+                        if action_str:
+                            self._refresh_actions()
+                            self._bind_new_custom_action(window, action_str)
+                        continue
+                    
+                    if is_custom_category and idx == len(current_keymap) + 1:
+                        # Clicked "Delete custom action..."
+                        self._delete_custom_action_dialog()
+                        self._refresh_actions()
+                        continue
+                    
                     action, current_key, _ = current_keymap[idx]
                     old_mapping = (window, action, current_key)
 
                     # Ask what to do
-                    idx = Dialog().select(tr(30000), [tr(30011), tr(30012)])
-                    if idx == -1:
+                    options = [tr(30011), tr(30012)]
+                    if is_custom_category:
+                        options.append(tr(34003))
+                    idx2 = Dialog().select(tr(30000), options)
+                    if idx2 == -1:
                         continue
-                    elif idx == 1:
-                        # Remove
+                    elif idx2 == 1:
+                        # Remove key mapping
                         if old_mapping in self.userkeymap:
                             self.userkeymap.remove(old_mapping)
                             self.dirty = True
-                    elif idx == 0:
+                    elif idx2 == 2 and is_custom_category:
+                        # Delete custom action entirely
+                        delete_custom_action(action)
+                        if old_mapping in self.userkeymap:
+                            self.userkeymap.remove(old_mapping)
+                        self.dirty = True
+                        self._refresh_actions()
+                        break
+                    elif idx2 == 0:
                         # Edit key
                         newkey = KeyListener.record_key()
                         if newkey is None:
@@ -81,6 +116,48 @@ class Editor(object):
                         self.userkeymap.append(new_mapping)
                         if old_mapping != new_mapping:
                             self.dirty = True
+
+    def _refresh_actions(self):
+        load_custom_actions()
+        global ACTIONS
+        import resources.lib.actions as _actions_mod
+        ACTIONS = _actions_mod.ACTIONS
+
+    def _add_custom_action_dialog(self, category):
+        name = Dialog().input(tr(34004))
+        if not name or not name.strip():
+            return None
+        action_str = Dialog().input(tr(34005))
+        if not action_str or not action_str.strip():
+            return None
+        add_custom_action(category, name.strip(), action_str.strip())
+        return action_str.strip()
+
+    def _bind_new_custom_action(self, window, action_str):
+        newkey = KeyListener.record_key()
+        if newkey is None:
+            return
+        if self._long_press():
+            newkey += ' + longpress'
+        new_mapping = (window, action_str, newkey)
+        self.userkeymap.append(new_mapping)
+        self.dirty = True
+
+    def _delete_custom_action_dialog(self):
+        from resources.lib.actions import _custom_actions_cache
+        all_items = []
+        for cat, items in _custom_actions_cache.items():
+            for item in items:
+                all_items.append(item)
+        if not all_items:
+            Dialog().notification(tr(30000), tr(34006))
+            return
+        display_items = [item["name"] for item in all_items]
+        idx = Dialog().select(tr(34007), display_items)
+        if idx == -1:
+            return
+        if Dialog().yesno(tr(34008), display_items[idx]):
+            delete_custom_action(all_items[idx]["action"])
 
     def _current_keymap(self, window, category):
         actions = OrderedDict([(action, "")

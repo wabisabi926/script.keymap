@@ -1465,3 +1465,40 @@ msgstr "OSD Playlist (Only Fuse/Horizon Skin)"
 msgctxt "#33010"
 msgid "activatewindow(1143)"
 msgstr "OSD Playlist (Only zephyr2.resurrection Skin)"
+
+# Custom Actions
+msgctxt "#34000"
+msgid "Custom Actions"
+msgstr ""
+
+msgctxt "#34001"
+msgid "➕ Add custom action..."
+msgstr ""
+
+msgctxt "#34002"
+msgid "🗑️ Delete custom action..."
+msgstr ""
+
+msgctxt "#34003"
+msgid "Delete custom action"
+msgstr ""
+
+msgctxt "#34004"
+msgid "Enter display name"
+msgstr ""
+
+msgctxt "#34005"
+msgid "Enter action string"
+msgstr ""
+
+msgctxt "#34006"
+msgid "No custom actions"
+msgstr ""
+
+msgctxt "#34007"
+msgid "Select action to delete"
+msgstr ""
+
+msgctxt "#34008"
+msgid "Confirm delete"
+msgstr ""

@@ -22,8 +22,11 @@ import xbmcaddon
 import xbmcvfs
 import resources.lib.utils as utils
 from xbmcgui import Dialog
-from resources.lib.editor import Editor
 from resources.lib.utils import tr, settings
+from resources.lib.actions import load_custom_actions
+
+load_custom_actions()
+from resources.lib.editor import Editor
 
 default = xbmcvfs.translatePath('special://xbmc/system/keymaps/keyboard.xml')
 userdata = xbmcvfs.translatePath('special://userdata/keymaps')
@@ -45,6 +48,7 @@ def main():
         if response:
             xbmcaddon.Addon().openSettings()
             return
+    
     ## load mappings ##
     try:
         setup_keymap_folder()

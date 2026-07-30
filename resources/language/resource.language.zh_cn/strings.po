@@ -1442,3 +1442,40 @@ msgstr "OSD 播放列表（仅适配 导火线/地平线）"
 msgctxt "#33010"
 msgid "activatewindow(1143)"
 msgstr "OSD 播放列表（仅适配 清风2 复活版）"
+
+# Custom Actions
+msgctxt "#34000"
+msgid "Custom Actions"
+msgstr "自定义动作"
+
+msgctxt "#34001"
+msgid "➕ Add custom action..."
+msgstr "➕ 添加自定义动作..."
+
+msgctxt "#34002"
+msgid "🗑️ Delete custom action..."
+msgstr "🗑️ 删除自定义动作..."
+
+msgctxt "#34003"
+msgid "Delete custom action"
+msgstr "删除自定义动作"
+
+msgctxt "#34004"
+msgid "Enter display name"
+msgstr "输入显示名称"
+
+msgctxt "#34005"
+msgid "Enter action string"
+msgstr "输入 Action 字符串"
+
+msgctxt "#34006"
+msgid "No custom actions"
+msgstr "暂无自定义动作"
+
+msgctxt "#34007"
+msgid "Select action to delete"
+msgstr "选择要删除的动作"
+
+msgctxt "#34008"
+msgid "Confirm delete"
+msgstr "确认删除"

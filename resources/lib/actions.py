@@ -15,9 +15,59 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import json
+import os
 from collections import OrderedDict
+import xbmcvfs
 from resources.lib.utils import rpc
 from resources.lib.utils import tr
+
+CUSTOM_ACTIONS_FILE = os.path.join(
+    xbmcvfs.translatePath('special://profile/addon_data/script.keymap'),
+    'custom_actions.json'
+)
+
+_custom_actions_cache = {}
+
+def load_custom_actions():
+    global _custom_actions_cache, ACTIONS
+    _custom_actions_cache = {}
+    if os.path.exists(CUSTOM_ACTIONS_FILE):
+        try:
+            with open(CUSTOM_ACTIONS_FILE, 'r') as f:
+                _custom_actions_cache = json.load(f)
+        except Exception:
+            _custom_actions_cache = {}
+    ACTIONS = _get_action_dict()
+
+def save_custom_actions():
+    dir_path = os.path.dirname(CUSTOM_ACTIONS_FILE)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+    with open(CUSTOM_ACTIONS_FILE, 'w') as f:
+        json.dump(_custom_actions_cache, f, ensure_ascii=False, indent=2)
+
+def add_custom_action(category, name, action):
+    if category not in _custom_actions_cache:
+        _custom_actions_cache[category] = []
+    _custom_actions_cache[category].append({"name": name, "action": action})
+    save_custom_actions()
+
+def delete_custom_action(action_string):
+    for cat in list(_custom_actions_cache.keys()):
+        items = _custom_actions_cache[cat]
+        new_items = [a for a in items if a["action"] != action_string]
+        if len(new_items) != len(items):
+            if new_items:
+                _custom_actions_cache[cat] = new_items
+            else:
+                del _custom_actions_cache[cat]
+            save_custom_actions()
+            return True
+    return False
+
+CUSTOM_CATEGORY = 34000
+
 # Navigation, 
 _actions = [
     [tr(32001), [
@@ -398,6 +448,14 @@ def _get_action_dict():
 
     d[tr(32011)] = _get_activate_window_actions() # Windows
     d[tr(32012)] = _get_run_addon_actions()       # Add-ons
+    
+    custom_cat = tr(CUSTOM_CATEGORY)
+    custom_dict = OrderedDict()
+    for cat, items in _custom_actions_cache.items():
+        for item in items:
+            display = "%s [%s]" % (item["name"], cat)
+            custom_dict[item["action"]] = display
+    d[custom_cat] = custom_dict
     return d
 
 
