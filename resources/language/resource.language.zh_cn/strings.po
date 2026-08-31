@@ -17,15 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.5\n"
 
-msgctxt "Addon Summary"
-msgid "An editor for keymap files"
-msgstr "键映射编辑器"
-
-msgctxt "Addon Description"
-msgid "Keymap Editor is a GUI for configuring mappings for remotes, keyboard and other inputs supported by Kodi. Note: existing user defined key mappings will be renamed to .bak."
-msgstr "键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。"
-
-# Text Messages
 msgctxt "#30000"
 msgid "Keymap Editor"
 msgstr "键映射编辑器"
@@ -75,8 +66,8 @@ msgid "Edit key"
 msgstr "编辑键"
 
 msgctxt "#30012"
-msgid "Remove"
-msgstr "删除"
+msgid "Remove key"
+msgstr "删除键"
 
 msgctxt "#30013"
 msgid "Long Press"
@@ -1403,62 +1394,57 @@ msgctxt "#32012"
 msgid "Add-ons"
 msgstr "插件"
 
-msgctxt "#33001"
-msgid "DialogSelectVideo (Only Piers+)"
-msgstr "一键视频流（仅适配 Piers+）"
+msgctxt "#32013"
+msgid "Frequent"
+msgstr "常用"
 
-msgctxt "#33002"
+msgctxt "#33001"
 msgid "DialogSelectAudio (Only Piers+)"
 msgstr "一键音轨（仅适配 Piers+）"
 
-msgctxt "#33003"
+msgctxt "#33002"
 msgid "DialogSelectSubtitle (Only Piers+)"
 msgstr "一键字幕（仅适配 Piers+）"
 
-msgctxt "#33004"
-msgid "activatewindow(1148)"
-msgstr "一键视频流（仅适配 导火线/地平线）"
-
-msgctxt "#33005"
+msgctxt "#33003"
 msgid "activatewindow(1146)"
 msgstr "一键音轨（仅适配 导火线/地平线）"
 
-msgctxt "#33006"
+msgctxt "#33004"
 msgid "activatewindow(1147)"
 msgstr "一键字幕（仅适配 导火线/地平线）"
 
-msgctxt "#33007"
-msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
-msgstr "记录当前时间为跳过点 (片头/片尾)"
-
-msgctxt "#33008"
-msgid "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)"
-msgstr "删除当前剧集的跳过点记录"
-
-msgctxt "#33009"
+msgctxt "#33005"
 msgid "activatewindow(1140)"
 msgstr "OSD 播放列表（仅适配 导火线/地平线）"
 
-msgctxt "#33010"
+msgctxt "#33006"
 msgid "activatewindow(1143)"
 msgstr "OSD 播放列表（仅适配 清风2 复活版）"
 
-# Custom Actions
-msgctxt "#34000"
-msgid "Custom Actions"
-msgstr "自定义动作"
+msgctxt "#33007"
+msgid "activatewindow(1112)"
+msgstr "OSD 播放列表（仅适配 Estuary N）"
+
+msgctxt "#33008"
+msgid "RunScript(plugin.video.skipintro, ?mode=record_skip_point)"
+msgstr "记录当前时间为跳过点 (片头/片尾)"
+
+msgctxt "#33009"
+msgid "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)"
+msgstr "删除当前剧集的跳过点记录"
 
 msgctxt "#34001"
-msgid "➕ Add custom action..."
-msgstr "➕ 添加自定义动作..."
+msgid "Custom operations"
+msgstr "自定义操作"
 
 msgctxt "#34002"
-msgid "🗑️ Delete custom action..."
-msgstr "🗑️ 删除自定义动作..."
+msgid "Delete custom operation..."
+msgstr "删除自定义操作..."
 
 msgctxt "#34003"
-msgid "Delete custom action"
-msgstr "删除自定义动作"
+msgid "Delete custom operation"
+msgstr "删除自定义操作"
 
 msgctxt "#34004"
 msgid "Enter display name"

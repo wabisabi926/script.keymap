@@ -27,50 +27,29 @@ CUSTOM_ACTIONS_FILE = os.path.join(
     'custom_actions.json'
 )
 
-_custom_actions_cache = {}
+_custom_actions_cache = []  # flat list of {"name": str, "action": str}
 
-def load_custom_actions():
-    global _custom_actions_cache, ACTIONS
-    _custom_actions_cache = {}
-    if os.path.exists(CUSTOM_ACTIONS_FILE):
-        try:
-            with open(CUSTOM_ACTIONS_FILE, 'r') as f:
-                _custom_actions_cache = json.load(f)
-        except Exception:
-            _custom_actions_cache = {}
-    ACTIONS = _get_action_dict()
+# --- Category definitions ---
+# 32013 = 常用 (Frequent), FIRST
+# 32001-32010 = 导航/播放/音频/图片/字幕/PVR/项目操作/系统/虚拟键盘/其他
+# 32011 = 窗口 (Windows, dynamic)
+# 32012 = 插件 (Add-ons, dynamic)
 
-def save_custom_actions():
-    dir_path = os.path.dirname(CUSTOM_ACTIONS_FILE)
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-    with open(CUSTOM_ACTIONS_FILE, 'w') as f:
-        json.dump(_custom_actions_cache, f, ensure_ascii=False, indent=2)
-
-def add_custom_action(category, name, action):
-    if category not in _custom_actions_cache:
-        _custom_actions_cache[category] = []
-    _custom_actions_cache[category].append({"name": name, "action": action})
-    save_custom_actions()
-
-def delete_custom_action(action_string):
-    for cat in list(_custom_actions_cache.keys()):
-        items = _custom_actions_cache[cat]
-        new_items = [a for a in items if a["action"] != action_string]
-        if len(new_items) != len(items):
-            if new_items:
-                _custom_actions_cache[cat] = new_items
-            else:
-                del _custom_actions_cache[cat]
-            save_custom_actions()
-            return True
-    return False
-
-CUSTOM_CATEGORY = 34000
-
-# Navigation, 
 _actions = [
-    [tr(32001), [
+    # --- 常用 (32013) ---
+    (32013, tr(32013), [
+        "DialogSelectAudio", tr(33001),
+        "DialogSelectSubtitle", tr(33002),
+        "activatewindow(1146)", tr(33003),
+        "activatewindow(1147)", tr(33004),
+        "activatewindow(1140)", tr(33005),
+        "activatewindow(1143)", tr(33006),
+        "activatewindow(1112)", tr(33007),
+        "RunScript(plugin.video.skipintro, ?mode=record_skip_point)", tr(33008),
+        "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)", tr(33009),
+    ]),
+    # --- Navigation (导航) ---
+    (32001, tr(32001), [
         "left", tr(30200),
         "right", tr(30201),
         "up", tr(30202),
@@ -93,10 +72,9 @@ _actions = [
         "scrolldown", tr(30219),
         "cursorleft", tr(30220),
         "cursorright", tr(30221),
-
-    ]],
-# Playback, 
-    [tr(32002), [
+    ]),
+    # --- Playback (播放控制) ---
+    (32002, tr(32002), [
         "play", tr(30300),
         "pause", tr(30301),
         "playpause", tr(30302),
@@ -138,15 +116,9 @@ _actions = [
         "nextstereomode", tr(30345),
         "previousstereomode", tr(30346),
         "stereomodetomono", tr(30347),
-        "DialogSelectVideo", tr(33001),
-        "activatewindow(1148)", tr(33004),
-        "RunScript(plugin.video.skipintro, ?mode=record_skip_point)", tr(33007),
-        "RunScript(plugin.video.skipintro, ?mode=delete_skip_point)", tr(33008),
-        "activatewindow(1140)", tr(33009),
-        "activatewindow(1143)", tr(33010)
-    ]],
-# Audio, 
-    [tr(32003), [
+    ]),
+    # --- Audio (音频) ---
+    (32003, tr(32003), [
         "mute", tr(30400),
         "volumeup", tr(30401),
         "volumedown", tr(30402),
@@ -158,11 +130,9 @@ _actions = [
         "volampup", tr(30408),
         "volampdown", tr(30409),
         "volumeamplification", tr(30410),
-        "DialogSelectAudio", tr(33002),
-        "activatewindow(1146)", tr(33005)
-    ]],
-# Pictures, 
-    [tr(32004), [
+    ]),
+    # --- Pictures (图片) ---
+    (32004, tr(32004), [
         "nextpicture", tr(30500),
         "previouspicture", tr(30501),
         "rotate", tr(30502),
@@ -178,10 +148,10 @@ _actions = [
         "zoomlevel6", tr(30512),
         "zoomlevel7", tr(30513),
         "zoomlevel8", tr(30514),
-        "zoomlevel9", tr(30515)
-    ]],
-# Subtitle, 
-    [tr(32005), [
+        "zoomlevel9", tr(30515),
+    ]),
+    # --- Subtitle (字幕) ---
+    (32005, tr(32005), [
         "showsubtitles", tr(30600),
         "nextsubtitle", tr(30601),
         "browsesubtitle", tr(30602),
@@ -192,11 +162,9 @@ _actions = [
         "subtitlealign", tr(30607),
         "subtitleshiftup", tr(30608),
         "subtitleshiftdown", tr(30609),
-        "DialogSelectSubtitle", tr(33003),
-        "activatewindow(1147)", tr(33006)
-    ]],
-# PVR, 
-    [tr(32006), [
+    ]),
+    # --- PVR ---
+    (32006, tr(32006), [
         "channelup", tr(30700),
         "channeldown", tr(30701),
         "previouschannelgroup", tr(30702),
@@ -207,10 +175,10 @@ _actions = [
         "record", tr(30707),
         "togglecommskip", tr(30708),
         "showtimerrule", tr(30709),
-        "channelnumberseparator", tr(30710)
-    ]],
-# Item Actions, 
-    [tr(32007), [
+        "channelnumberseparator", tr(30710),
+    ]),
+    # --- Item Actions (项目操作) ---
+    (32007, tr(32007), [
         "queue", tr(30800),
         "delete", tr(30801),
         "copy", tr(30802),
@@ -222,10 +190,10 @@ _actions = [
         "togglewatched", tr(30808),
         "increaserating", tr(30809),
         "decreaserating", tr(30810),
-        "setrating", tr(30811)
-    ]],
-# System, 
-    [tr(32008), [
+        "setrating", tr(30811),
+    ]),
+    # --- System (系统) ---
+    (32008, tr(32008), [
         "togglefullscreen", tr(30900),
         "minimize", tr(30901),
         "shutdown", tr(30902),
@@ -238,10 +206,10 @@ _actions = [
         "settingsreset", tr(30909),
         "settingslevelchange", tr(30910),
         "togglefont", tr(30911),
-        "reloadskin", tr(30912)
-    ]],
-# Virtual Keyboard, 
-    [tr(32009), [
+        "reloadskin", tr(30912),
+    ]),
+    # --- Virtual Keyboard (虚拟键盘) ---
+    (32009, tr(32009), [
         "enter", tr(31000),
         "shift", tr(31001),
         "symbols", tr(31002),
@@ -259,10 +227,10 @@ _actions = [
         "red", tr(31014),
         "green", tr(31015),
         "yellow", tr(31016),
-        "blue", tr(31017)
-    ]],
-# Other, 
-    [tr(32010), [
+        "blue", tr(31017),
+    ]),
+    # --- Other (其他) ---
+    (32010, tr(32010), [
         "updatelibrary(video)", tr(31100),
         "updatelibrary(music)", tr(31101),
         "cleanlibrary(video)", tr(31102),
@@ -282,9 +250,76 @@ _actions = [
         "nextpreset", tr(31115),
         "previouspreset", tr(31116),
         "lockpreset", tr(31117),
-        "randompreset", tr(31118)
-    ]],
+        "randompreset", tr(31118),
+    ]),
 ]
+
+
+def _migrate_old_format(raw):
+    """Migrate old custom_actions.json formats to flat list."""
+    import xbmc
+    migrated = []
+    changed = False
+
+    # New flat format: list of {"name", "action"}
+    if isinstance(raw, list):
+        for item in raw:
+            if isinstance(item, dict) and "name" in item and "action" in item:
+                migrated.append(item)
+        return migrated
+
+    # Old format: dict keyed by category_id -> list of items
+    if isinstance(raw, dict):
+        for key, items in raw.items():
+            if isinstance(items, list):
+                for item in items:
+                    if isinstance(item, dict) and "name" in item and "action" in item:
+                        migrated.append(item)
+                        changed = True
+    if changed:
+        xbmc.log("[keymap] Migrated old custom_actions.json to flat list (%d items)" % len(migrated), xbmc.LOGINFO)
+        save_custom_actions_to_file(migrated)
+    return migrated
+
+
+def load_custom_actions():
+    global _custom_actions_cache, ACTIONS
+    _custom_actions_cache = []
+    if os.path.exists(CUSTOM_ACTIONS_FILE):
+        try:
+            with open(CUSTOM_ACTIONS_FILE, 'r') as f:
+                raw = json.load(f)
+            _custom_actions_cache = _migrate_old_format(raw)
+        except Exception:
+            _custom_actions_cache = []
+    ACTIONS = _get_action_dict()
+
+
+def save_custom_actions_to_file(data):
+    dir_path = os.path.dirname(CUSTOM_ACTIONS_FILE)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+    with open(CUSTOM_ACTIONS_FILE, 'w') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def save_custom_actions():
+    save_custom_actions_to_file(_custom_actions_cache)
+
+
+def add_custom_action(name, action):
+    _custom_actions_cache.append({"name": name, "action": action})
+    save_custom_actions()
+
+
+def delete_custom_action(action_string):
+    global _custom_actions_cache
+    new_list = [a for a in _custom_actions_cache if a["action"] != action_string]
+    if len(new_list) != len(_custom_actions_cache):
+        _custom_actions_cache = new_list
+        save_custom_actions()
+        return True
+    return False
 
 
 _activate_window = [
@@ -384,7 +419,7 @@ _activate_window = [
     "gamepadinput", tr(31294),
     "gamevolume", tr(31295),
     "managevideoversions", tr(31296),
-    "managevideoextras", tr(31297)
+    "managevideoextras", tr(31297),
 ]
 
 _windows = [
@@ -407,7 +442,7 @@ _windows = [
     "osdvideosettings", tr(30116),
     "osdaudiosettings", tr(30117),
     "visualisation", tr(30118),
-    "slideshow", tr(30119)
+    "slideshow", tr(30119),
 ]
 
 
@@ -440,23 +475,25 @@ def _get_activate_window_actions():
 def _get_action_dict():
     """Map actions to 'category name'->'action id'->'action name' dict."""
     d = OrderedDict()
-    for elem in _actions:
-        category = elem[0]
-        actions = elem[1][0::2]
-        names = elem[1][1::2]
-        d[category] = OrderedDict(zip(actions, names))
+    for cat_id, cat_name, actions_list in _actions:
+        actions = actions_list[0::2]
+        names = actions_list[1::2]
+        d[cat_name] = OrderedDict(zip(actions, names))
 
-    d[tr(32011)] = _get_activate_window_actions() # Windows
-    d[tr(32012)] = _get_run_addon_actions()       # Add-ons
-    
-    custom_cat = tr(CUSTOM_CATEGORY)
-    custom_dict = OrderedDict()
-    for cat, items in _custom_actions_cache.items():
-        for item in items:
-            display = "%s [%s]" % (item["name"], cat)
-            custom_dict[item["action"]] = display
-    d[custom_cat] = custom_dict
+    d[tr(32011)] = _get_activate_window_actions()
+    d[tr(32012)] = _get_run_addon_actions()
+
+    # Inject custom actions into Frequent category (flat list)
+    custom_cat_name = tr(32013)
+    if custom_cat_name in d:
+        for item in _custom_actions_cache:
+            d[custom_cat_name][item["action"]] = item["name"]
+
     return d
+
+
+# Convenience for editor.py
+FREQUENT_CATEGORY = 32013
 
 
 ACTIONS = _get_action_dict()
